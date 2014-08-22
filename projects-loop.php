@@ -13,7 +13,6 @@
                     <li class="project one-fourth<?php if( $counter%4 == 0 ) { echo " last"; } ?>">
                         <a href="<?php the_permalink(); ?>" class="portfolio-item">
                         <div class="proj-thumb">
-                        
                             <?php 
                                 if ( has_post_thumbnail() ) { 
                                     the_post_thumbnail('portfolio-one-third'); 

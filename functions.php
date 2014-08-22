@@ -89,7 +89,7 @@ function corpo_enqueue_css()
     );
     $color_scheme = of_get_option('corpo_color_scheme','red');
     
-    wp_enqueue_style( 'corpo-fonts', add_query_arg( $query_args, "$protocol://fonts.googleapis.com/css" ), array(), null );
+    //wp_enqueue_style( 'corpo-fonts', add_query_arg( $query_args, "$protocol://fonts.googleapis.com/css" ), array(), null );
 
     wp_register_style('font_awsome-css', get_template_directory_uri() . '/css/font-awesome.min.css', array(),  null);
     wp_enqueue_style('font_awsome-css'); 

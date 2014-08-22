@@ -22,7 +22,7 @@
                 </div>
             </div>
             <div class="left">
-                Copyright &copy; <?php echo date("Y"); ?> <?php bloginfo('name'); ?>. <?php _e('Powered by', 'corpo'); ?> 
+                Copyright &copy; <?php echo date("Y", strtotime("-1 year")); ?> - <?php echo date("Y"); ?> <?php bloginfo('name'); ?>. <?php _e('Powered by', 'corpo'); ?> 
 					<a href="//wordpress.org" title="WordPress"><?php _e('WordPress', 'corpo'); ?></a> &amp; <a href="http://webtuts.pl/themes/corpo" title="<?php _e('Corpo Theme', 'corpo'); ?>"><?php _e('Corpo Theme', 'corpo'); ?></a>.
             </div>
         </div>
