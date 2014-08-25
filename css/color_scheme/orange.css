@@ -14,7 +14,7 @@
     nav#main-nav > ul > li:hover > a { background-color:#852606;}
     nav#main-nav > ul > li.current_page_item > a { color: #FF7F00; }
     nav#main-nav > ul > li.current_page_ancestor > a { color: #FF7F00; }
-    nav#main-nav > ul > li.current-menu-item > a { color: #FFFFFF; background:url(../../images/icon-angle-down.png) center bottom no-repeat; height:2em; font-size:1.1em; background-size: 9px 5px;}
+    nav#main-nav > ul > li.current-menu-item > a { color: #FFFFFF; background:url(../../images/icon-angle-down.png) center bottom no-repeat; height:2em; font-size:16px; background-size: 9px 5px;}
     nav#main-nav > ul > li > ul > li:first-child {border-top: 2px solid #FF7F00;}
     nav#main-nav > ul > li > ul:before {
         border-bottom: 20px solid #FF7F00;

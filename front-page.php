@@ -24,7 +24,6 @@ if ( !defined('ABSPATH')) exit;
         <?php corpo_home_slider(); ?>
 
         <div id="content-wrapper">
-
             <?php if ( of_get_option('corpo_callout') ) : ?>
             
             <!-- Start Callout section -->

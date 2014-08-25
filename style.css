@@ -245,7 +245,7 @@
         padding:2px 10px;
         color: #ffffff;
         display:block;
-        font-size:14px;
+        font-size:16px;
         font-weight:600;
         text-transform:uppercase;
         text-align:center;
@@ -275,7 +275,7 @@
     nav#main-nav ul ul li a {
         padding:11px 10px 12px 16px; 
         display:block; 
-        font-size:11px; 
+        font-size:14px; 
         color:#797979; 
         line-height:1em; 
         text-decoration: none;
@@ -582,7 +582,6 @@
     #content .entry-content { 
         overflow: hidden;
         background : url('images/divider-rev.png') repeat-x 0 100%;
-        padding-bottom: 24px;
     }
     #content  .entry-content .entry-meta, #content  .entry-excerpt .entry-meta, #content  article header .entry-meta, .project-meta {
         margin-bottom: 10px;
@@ -1668,3 +1667,87 @@
         #footer-nav { text-align: center; display: inline-block; }
         #footer-bar .left, #footer-bar .right { float: none; }
     }
+.banner{
+	background:#999;
+	padding:10px;
+	font-size:18px;
+	margin-top:-20px;
+	margin-bottom:20px;
+}
+#main-content h2{
+	background:#cccccc;
+	display:inline-block;
+	padding:3px;
+}
+#main-content h3{
+	background:#cccccc;
+	display:inline-block;
+	padding:3px;
+}
+#main-content h4.title{
+	font-size:20px;
+}
+.anno{
+	background:#cccccc;
+	padding:3px;
+	display:inline-block;
+}
+#main-content ol{
+	margin-left:0;
+}
+#main-content ul li{
+}
+#main-content .row{
+}
+#main-content .row h3{
+	background:#cccccc;
+	display:block;
+}
+
+#main-content .box {
+	border-bottom: 1px solid #dddddd;
+	position: relative;
+	clear:both;
+	padding:10px 0;
+	display:table;
+	content: " ";
+	width:100%;
+}
+#main-content .span6, span4 {
+	content: " "
+}
+#main-content .span6 {
+	width: 360px;
+	float: left
+}
+#main-content .span4 {
+	float: left
+}
+#main-content .a1 {
+	position: absolute;
+	width: 280px;
+	right: -20px;
+	top: 100px
+}
+#main-content .a2 {
+	height: 224px
+}
+#main-content .a3 {
+	position: absolute;
+	width: 280px;
+	right: 0px;
+	top: 68px
+}
+#main-content .a4 {
+	padding-top: 50px;
+	height: 160px
+}
+#main-content .a5 {
+	position: absolute;
+	right: 50px
+}
+#main-content .a6 {
+	position: absolute;
+	right: 0px;
+	top: 50px
+}

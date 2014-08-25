@@ -23,7 +23,7 @@
                             <span class="image-overlay"></span>
                         </div>
                         <div class="proj-description">
-                            <h5><?php the_title(); ?></h5>
+                            <h4><?php the_title(); ?></h4>
                             <?php $terms = wp_get_object_terms ( $post->ID, 'corpo_services' ); ?>
                             <i><?php if( $terms ) { echo $terms[0]->name; } ?></i>
                         </div>
