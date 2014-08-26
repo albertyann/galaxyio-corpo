@@ -32,6 +32,7 @@
                 <nav id="main-nav" role="navigation">
                     <?php
                     if(has_nav_menu('main-menu')){
+			    /*
                          wp_nav_menu(array(
                             'theme_location'  => 'main-menu',
                             'container'       => false, 
@@ -44,8 +45,10 @@
                             'link_before'     => '',
                             'link_after'      => '',
                             'depth'           => 0,
-                            'walker'          => ''
+                            'walker'          => '',
                          ));
+			 */
+			 galaxyio_menu();
                     }else {
                     ?>
                         <ul class="nav" id="main-menu">

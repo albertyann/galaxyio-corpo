@@ -257,27 +257,26 @@
     /* Submenus */
     nav#main-nav ul ul {
         width:185px;
-        display:none;
         position:absolute;
         top: 10px;
         z-index: 10;
         margin: 0;
     }
     nav#main-nav ul ul li {
-        display:block; 
-        position:relative; 
-        background-color:#ffffff; 
-        border-left: 1px solid #e1e1e1;  
-        border-right: 1px solid #e1e1e1;  
-        border-bottom: 1px solid #e1e1e1; 
-        margin:0; 
+        display:block;
+        position:relative;
+        background-color:#ffffff;
+        border-left: 1px solid #e1e1e1;
+        border-right: 1px solid #e1e1e1;
+        border-bottom: 1px solid #e1e1e1;
+        margin:0;
     }
     nav#main-nav ul ul li a {
-        padding:11px 10px 12px 16px; 
-        display:block; 
-        font-size:14px; 
-        color:#797979; 
-        line-height:1em; 
+        padding:11px 10px 12px 16px;
+        display:block;
+        font-size:11px;
+        color:#797979;
+        line-height:1em;
         text-decoration: none;
     }
     nav#main-nav ul ul a:hover {text-decoration:none;}
@@ -301,6 +300,49 @@
         border-top:1px solid #e1e1e1;
     }
     nav#main-nav ul ul li:first-child > ul {top:0px; border-top:0px;}
+    nav#main-nav ul li > div {display:block;}
+    nav#main-nav ul li > div ul {
+	position:relative;
+        display:block;
+    }
+    nav#main-nav li:hover > .menu-sub-box {display:block;}
+    nav#main-nav ul li > div.menu-sub-box {
+	content:' ';
+	display:none;
+	position: absolute;
+	width:370px;
+	height:160px;
+	top:30px;
+	background-color:white;
+	border-right:1px solid #e1e1e1;
+	border-bottom:1px solid #e1e1e1;
+	margin-top:10px;
+    }
+    nav#main-nav ul .sub-menu, nav#main-nav  .menu-sub-box{
+       display:none;
+    }
+    nav#main-nav ul li .tine {
+	position: absolute;
+	top:-5px;
+	left:18px;
+	border-bottom: 20px solid #FF7F00;
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+    }
+    nav#main-nav ul li .menu-sub {
+        float:left;
+	margin-top:-10px;
+    }
+    nav#main-nav ul li .menu-sub ul li:first-child{
+	border-top:2px solid #FF7F00;
+    }
+    nav#main-nav ul li .menu-sub b {
+	display:block;
+        padding: 11px 10px 12px 16px;
+	font-size: 14px;
+	font-weight:normal;
+	line-height:1em;
+    }
      
     /* Top Bar */
     #top-bar { overflow: hidden; margin-bottom: 12px; } 
@@ -1667,6 +1709,7 @@
         #footer-nav { text-align: center; display: inline-block; }
         #footer-bar .left, #footer-bar .right { float: none; }
     }
+<<<<<<< HEAD
 .banner{
 	background:#999;
 	padding:10px;

@@ -540,3 +540,67 @@ function corpo_options_display_sidebar() { ?>
 		</div>
 	</div>
 <?php }
+
+function galaxyio_menu() {
+	$menu = wp_get_nav_menu_object('header_menu');
+	$menu_items = wp_get_nav_menu_items($menu->term_id, array('update_post_term_cache' => false));
+	$menus = find_child(0, $menu_items);
+	//var_dump($menus);die;
+	echo '<ul id="main-menu" class="menu">';
+	foreach($menus as $m) {
+		$menu = $menu_items[$m['index']];
+		echo '<li><a href="#">'.$menu->title.'</a>';
+		if ($m['max_depth'] == 3) {
+			echo '<div class="menu-sub-box">';
+			echo '<div class="tine"></div>';
+			foreach($m['child'] as $sm) {
+				$menu = $menu_items[$sm['index']];
+				echo '<div class="menu-sub">';
+				echo '<ul>';
+				echo '<li><b>'.$menu->title.'</b></li>';
+				foreach($sm['child'] as $tm) {
+					$menu = $menu_items[$tm['index']];
+					echo '<li><a href="#">'.$menu->title.'</a></li>';
+				}
+				echo '</ul>';
+				echo '</div>';
+			}
+			echo '</div>';
+		} elseif($m['max_depth'] == 2) {
+			echo '<ul class="sub-menu">';
+			foreach($m['child'] as $sm) {
+				$menu = $menu_items[$sm['index']];
+				echo '<li><a href="#">'.$menu->title.'</a></li>';
+			}
+			echo '</ul>';
+		}
+		echo '</li>';
+	}
+	echo '</ul>';
+}
+function find_child($id, $menu_items, $depth = 0) {
+	$menus = [];
+	foreach($menu_items as $index => $menu) {
+		if ($menu->menu_item_parent == $id) {
+			$child = find_child($menu->ID, $menu_items,  $depth + 1);
+			$max_depth = $depth + 1;
+			if (!empty($child)) {
+				$max_depth = $child[0]['max_depth'];
+				for($i = 1; $i < count($child); $i++) {
+					if ($child[$i]['max_depth'] > $max_depth)
+						$max_depth = $child[$i]['max_depth'];
+				}
+			}
+			$item = [
+				'id'        => $menu->ID,
+				'parent'    => $id,
+				'child'     => $child,
+				'depth'     => $depth + 1,
+				'index'     => $index,
+				'max_depth' => $max_depth,
+			];
+			$menus[] = $item;
+		}
+	}
+	return $menus;
+}
