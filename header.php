@@ -68,9 +68,4 @@
         }
         if ( !is_front_page() || $home_style == 'posts' ) : ?>
             <div id="content-wrapper">
-		<?php if(!is_front_page()): ?>
-			<div class="banner">
-				云仓科技——大数据处理、定制优化的NVM<sup>①</sup>系统
-			</div>
-		<?php endif; ?>
         <?php endif; ?>
