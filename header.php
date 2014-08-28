@@ -23,7 +23,7 @@
             <div id="header-inner">
                 <div id="logo">
                     <?php if (of_get_option('corpo_logo_image')) : ?>
-                    <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="logo-img"><img src="<?php echo of_get_option('corpo_logo_image'); ?>" alt="<?php bloginfo( 'name' ); ?>" /></a>
+                    <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="logo-img"><img src="<?php echo of_get_option('corpo_logo_image'); ?>" alt="<?php bloginfo( 'name' ); ?>" /></a><p class="site_tagline"><?php bloginfo('description'); ?></p> 
                     <?php else : ?>
                     <h1 id="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?> - <?php bloginfo('description'); ?>" rel="home"><?php bloginfo('name'); ?></a></h1><p class="site_tagline"><?php bloginfo('description'); ?></p>
                     <?php endif; ?>		

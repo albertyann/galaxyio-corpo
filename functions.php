@@ -557,7 +557,8 @@ function galaxyio_menu() {
 				$menu = $menu_items[$sm['index']];
 				echo '<div class="menu-sub">';
 				echo '<ul>';
-				echo '<li><b>'.$menu->title.'</b></li>';
+				if ($menu->title !== 'none')
+					echo '<li><b>'.$menu->title.'</b></li>';
 				foreach($sm['child'] as $tm) {
 					$menu = $menu_items[$tm['index']];
 					echo '<li><a href="'.$menu->url.'">'.$menu->title.'</a></li>';
