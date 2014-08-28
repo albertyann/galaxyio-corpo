@@ -545,11 +545,11 @@ function galaxyio_menu() {
 	$menu = wp_get_nav_menu_object('header_menu');
 	$menu_items = wp_get_nav_menu_items($menu->term_id, array('update_post_term_cache' => false));
 	$menus = find_child(0, $menu_items);
-	//var_dump($menus);die;
+	//var_dump($menu_items);die;
 	echo '<ul id="main-menu" class="menu">';
 	foreach($menus as $m) {
 		$menu = $menu_items[$m['index']];
-		echo '<li><a href="#">'.$menu->title.'</a>';
+		echo '<li><a href="'.$menu->url.'">'.$menu->title.'</a>';
 		if ($m['max_depth'] == 3) {
 			echo '<div class="menu-sub-box">';
 			echo '<div class="tine"></div>';
@@ -560,7 +560,7 @@ function galaxyio_menu() {
 				echo '<li><b>'.$menu->title.'</b></li>';
 				foreach($sm['child'] as $tm) {
 					$menu = $menu_items[$tm['index']];
-					echo '<li><a href="#">'.$menu->title.'</a></li>';
+					echo '<li><a href="'.$menu->url.'">'.$menu->title.'</a></li>';
 				}
 				echo '</ul>';
 				echo '</div>';
@@ -570,7 +570,7 @@ function galaxyio_menu() {
 			echo '<ul class="sub-menu">';
 			foreach($m['child'] as $sm) {
 				$menu = $menu_items[$sm['index']];
-				echo '<li><a href="#">'.$menu->title.'</a></li>';
+				echo '<li><a href="'.$menu->url.'">'.$menu->title.'</a></li>';
 			}
 			echo '</ul>';
 		}
