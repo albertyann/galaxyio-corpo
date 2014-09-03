@@ -30,7 +30,6 @@
     .project-nav a:hover { background: #FF7F00; }
 
     /* Main Slider (Flex Slider) */
-    .slides > li h3 { background-color: rgb(255, 127, 0); background-color: rgba(255, 127, 0, 0.8); }   
     .flexslider .flex-control-nav li a.flex-active { background-color: rgb(255, 127, 0); background: rgba(255, 127, 0, 0.8); }    
     
     /* Pagination */

@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 		<title><?php wp_title(); ?></title>
 		<?php wp_head(); ?>
+		<link rel="icon" type="image/png" href="/favicon.png" />
 	</head>
     <?php if ( is_front_page() && of_get_option('corpo_hp_style') == 1 ) { $class = 'custom-front'; } else { $class = ''; } ?>
 	<body <?php body_class($class); ?>>
@@ -21,7 +22,7 @@
         <!-- header -->
         <header id="header">
             <div id="header-inner">
-                <div id="logo">
+                <div class="logo">
                     <?php if (of_get_option('corpo_logo_image')) : ?>
                     <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="logo-img"><img src="<?php echo of_get_option('corpo_logo_image'); ?>" alt="<?php bloginfo( 'name' ); ?>" /></a><p class="site_tagline"><?php bloginfo('description'); ?></p> 
                     <?php else : ?>

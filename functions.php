@@ -91,7 +91,8 @@ function corpo_enqueue_css()
     
     //wp_enqueue_style( 'corpo-fonts', add_query_arg( $query_args, "$protocol://fonts.googleapis.com/css" ), array(), null );
 
-    wp_register_style('font_awsome-css', get_template_directory_uri() . '/css/font-awesome.min.css', array(),  null);
+    //wp_register_style('font_awsome-css', get_template_directory_uri() . '/css/font-awesome.min.css', array(),  null);
+    wp_register_style('font_awsome-css', 'http://cdn.bootcss.com/font-awesome/4.2.0/css/font-awesome.min.css', array(),  null);
     wp_enqueue_style('font_awsome-css'); 
     
     wp_register_style('corpo-css', get_stylesheet_directory_uri() . '/style.css');
