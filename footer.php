@@ -47,7 +47,7 @@
 			}
 		});
 		$("#top").click(function() {
-			$("html,body").animate({scrollTop: $(".page").offset().top-65},1000);
+			$("html,body").animate({scrollTop: $("#wrapper").offset().top-65},1000);
 		});
 
 	});
