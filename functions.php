@@ -280,7 +280,8 @@ function corpo_excerptlength_teaser($length) {
 function corpo_excerpt_more($more)
 {
     global $post;
-    return '... <a class="more" href="' . get_permalink($post->ID) . '">' . __('Continue reading &rarr;', 'corpo') . '</a>';
+    //return '... <a class="more" href="' . get_permalink($post->ID) . '">' . __('Continue reading &rarr;', 'corpo') . '</a>';
+    return '... <a class="more" href="' . get_permalink($post->ID) . '">' . __('继续阅读 &rarr;', 'corpo') . '</a>';
 }
 add_filter('excerpt_more', 'corpo_excerpt_more');
 
@@ -315,14 +316,14 @@ function corpo_post_meta($content) {
         $content .= '<div class="alignright">'. get_previous_posts_link( ) .'</div>';
         $content .= '<div class="alignleft">'. get_next_posts_link( ) .'</div> ';
 
-        $content .= '<div class="post-meta">';
-        if( !empty( $categories ) ) :
-            $content .= '<i>'. __( 'Posted in ', 'corpo' ) . $categories .'</i>';
-        endif;
-        if( !empty( $tags ) ) :
-            $content .= '<i> | '. __( 'Tagged: ', 'corpo' ) . $tags .'</i>';
-        endif;        
-        $content .= '</div>';
+        //$content .= '<div class="post-meta">';
+        //if( !empty( $categories ) ) :
+        //    $content .= '<i>'. __( 'Posted in ', 'corpo' ) . $categories .'</i>';
+        //endif;
+        //if( !empty( $tags ) ) :
+        //    $content .= '<i> | '. __( 'Tagged: ', 'corpo' ) . $tags .'</i>';
+        //endif;        
+        //$content .= '</div>';
     }
 	return $content;
 }

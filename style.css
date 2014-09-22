@@ -643,12 +643,9 @@
         background : url('images/divider-rev.png') repeat-x 0 100%;
     }
     #content  .entry-content .entry-meta, #content  .entry-excerpt .entry-meta, #content  article header .entry-meta, .project-meta {
-        margin-bottom: 10px;
         font-size: 11px;
-        padding: 6px 0px;
         overflow: hidden;
         border-top: 1px solid #ededed;
-        border-bottom: 1px solid #ededed;
     }
     .project-meta { font-size: 13px; }
     .project-meta ul { margin: 0; }
@@ -1446,7 +1443,7 @@
         height: 3px;
         border: none; 
     }
-    a.more { font-size: 12px; display: block; }
+    a.more { font-size: 12px; display: block; color:#cc3b0a;}
     /*Default WordPress styles*/
     .entry-content img {
         margin: 0 0 1em 0;
@@ -1962,6 +1959,9 @@
 			font-weight:bold;
 		}
 	}
+.down-page h4{
+	color:#ff7f00;
+}
 .down-page li {
 	list-style:none;
 }

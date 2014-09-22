@@ -14,18 +14,7 @@
 		<!-- /post thumbnail -->
         <div class="entry-excerpt">
             <h4><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h4>
-            <div class="entry-meta">
-                <i class="date"><?php _e('posted on','corpo'); ?> <?php the_time( get_option( 'date_format' ) ); ?></i> 
-                <i><?php _e( 'by', 'corpo' ); ?> <?php the_author_posts_link(); ?></i>
-                <i>| <?php comments_popup_link( __( 'No comments', 'corpo' ), __( '1 Comment', 'corpo' ), __( '% Comments', 'corpo' )); ?></i>
-                <?php 
-                if( get_the_title() == '' ) : ?>
-                <i>| <a href="<?php the_permalink(); ?>" class="thepermalink" title="<?php _e( 'Permalink', 'corpo' ); ?>"><?php _e( 'Permalink', 'corpo' ); ?></a></i>                                     
-                <?php endif;
-                if( is_sticky() ) : ?>
-                | <i class="icon-pushpin"></i> <i><?php _e( 'Sticky post', 'corpo' ); ?></i>
-                <?php endif; ?>
-            </div>
+            <div class="entry-meta"></div>
             <p><?php corpo_excerpt('corpo_excerptlength_teaser');  ?></p>
         </div>
 		

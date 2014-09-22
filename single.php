@@ -13,14 +13,7 @@
 		
             <header>
                 <h2><?php the_title(); ?></h2>
-                <div class="entry-meta">
-                    <i class="date">posted on <?php the_time( get_option( 'date_format' ) ); ?></i> 
-                    <i><?php _e( 'by', 'corpo' ); ?> <?php the_author_posts_link(); ?></i> 
-                    <i>| <?php comments_popup_link( __( 'Leave your thoughts', 'corpo' ), __( '1 Comment', 'corpo' ), __( '% Comments', 'corpo' )); ?></i>
-                    <?php if( is_sticky() ) : ?>
-                    | <i class="icon-pushpin"></i> <i><?php _e( 'Sticky post', 'corpo' ); ?></i>
-                    <?php endif; ?>
-                </div>
+                <div class="entry-meta"></div>
             </header>
 			<div class="entry-content">
                 <?php the_content(); ?>
@@ -33,7 +26,7 @@
                 <?php edit_post_link(); ?>
                 <?php corpo_setPostViews(get_the_ID()); ?>
 			</div>
-			<?php comments_template(); ?>
+			<?php //comments_template(); ?>
 			
 		</article>
 		
@@ -51,6 +44,6 @@
 	
 	</section>
     </div>
-<?php //get_sidebar(); ?>
+<?php get_sidebar(); ?>
 
 <?php get_footer(); ?>
