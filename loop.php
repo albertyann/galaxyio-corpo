@@ -15,7 +15,8 @@
         <div class="entry-excerpt">
             <h4><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h4>
             <div class="entry-meta"></div>
-            <p><?php corpo_excerpt('corpo_excerptlength_teaser');  ?></p>
+            <?php corpo_excerpt('corpo_excerptlength_teaser');  ?>
+	    <a class="more" href="<?php the_permalink();?>">继续阅读 &rarr;</a>
         </div>
 		
 		<?php edit_post_link(); ?>
